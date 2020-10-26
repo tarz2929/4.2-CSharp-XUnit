@@ -1,4 +1,5 @@
 using CSharpXUnit_4Point2;
+using System;
 using Xunit;
 
 namespace CSharpXUnit_4Point2_Tests
@@ -26,6 +27,50 @@ namespace CSharpXUnit_4Point2_Tests
 
             // Assert - Check the result to make sure it matches what's expected.
             Assert.Equal(expected, output);
+        }
+
+
+        [Theory]
+        // Lowest True
+        [InlineData(4, true)]
+        [InlineData(1, true)]
+        // Lowest Falses
+        [InlineData(3, false)]
+        [InlineData(2, false)]
+        // Max True
+        [InlineData(2147395600, true)]
+        // Max False
+        [InlineData(int.MaxValue, false)]
+        // Zero
+        [InlineData(0, true)]
+        // Min Negative
+        [InlineData(-1, false)]
+        // Negative of Min True
+        [InlineData(-4, false)]
+        // Max Negative
+        [InlineData(int.MinValue, false)]
+        public void PerfectSquare_Valid(int input, bool expected)
+        {
+            // Arrange - Set up any data, variables, objects, etc necessary for testing.
+            bool output;
+
+            // Act - Call the method, setter, whatever you're testing.
+            output = Program.PerfectSquare(input);
+
+            // Assert - Check the result to make sure it matches what's expected.
+            Assert.Equal(expected, output);
+        }
+
+        // Facts are for testing things that should always be true and do not require data sets.
+        [Fact]
+        public void MathPi_Value()
+        {
+            // Arrange - N/A
+
+            // Act - N/A
+
+            // Assert
+            Assert.Equal(3.1415926535897931, Math.PI);
         }
     }
 }
