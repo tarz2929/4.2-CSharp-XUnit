@@ -72,5 +72,19 @@ namespace CSharpXUnit_4Point2_Tests
             // Assert
             Assert.Equal(3.1415926535897931, Math.PI);
         }
+
+        [Fact]
+        public void Exception_Test()
+        {
+            // Arrange - N/A
+
+            // Act - N/A
+
+            // Assert
+            Assert.Throws<FormatException>(() => {
+                // This code block should throw a Exception of the type in the angle brackets.
+                Program.ThrowsFormatException();
+            });
+        }
     }
 }
