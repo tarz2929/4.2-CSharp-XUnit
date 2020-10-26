@@ -19,7 +19,7 @@ namespace CSharpXUnit_4Point2
         // If you can't get the method working after 5 minutes, write the tests and come back.
         public static bool PerfectSquare(int number)
         {
-            return true;
+            return Math.Sqrt(number) == Math.Ceiling(Math.Sqrt(number));
         }
     }
 }
