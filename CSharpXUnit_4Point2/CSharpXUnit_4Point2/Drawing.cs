@@ -24,7 +24,7 @@ namespace CSharpXUnit_4Point2
         */
 
         // Pillar: Polymorphism
-        private List<Shape> Shapes { get; set; }
+        public List<Shape> Shapes { get; set; }
 
         public double SpaceCovered => Shapes.Select(x => x.Area).Sum();
 
