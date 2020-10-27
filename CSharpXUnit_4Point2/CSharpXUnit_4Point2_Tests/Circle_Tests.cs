@@ -16,10 +16,10 @@ namespace CSharpXUnit_4Point2_Tests
             Circle myCircle = new Circle(Shape.ColourValue.Red, initialRadius);
 
             // Act
-
+            myCircle.Diameter = newDiameter;
 
             // Assert
-
+            Assert.Equal(expectedRadius, myCircle.Radius);
 
         }
   
