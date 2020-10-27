@@ -4,5 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>CSharpXUnit_4Point2_Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>
