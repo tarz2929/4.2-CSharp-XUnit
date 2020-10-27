@@ -15,7 +15,46 @@ namespace CSharpXUnit_4Point2_Tests
 
     public class Rectangle_Tests
     {
+        [Theory]
+        // Normal Set
+        [InlineData(10, 5, 12, 12, 5)]
+        [InlineData(100, 80, 90, 90, 80)]
+        // Switch Set
+        [InlineData(10, 5, 4, 5, 4)]
+        [InlineData(100, 80, 50, 80, 50)]
+        public void Length_Set(int initialLength, int initialWidth, int newLength, int expectedLength, int expectedWidth)
+        {
+            // Arrange
+            Rectangle myRectangle = new Rectangle(Shape.ColourValue.Red, initialLength, initialWidth);
 
+            // Act
+            myRectangle.Length = newLength;
+
+            // Assert
+            Assert.Equal(expectedLength, myRectangle.Length);
+            Assert.Equal(expectedWidth, myRectangle.Width);
+        }
+
+        [Theory]
+        // Normal Set
+        [InlineData(10, 5, 4, 10, 4)]
+        [InlineData(100, 80, 50, 100, 50)]
+        // Switch Set
+        [InlineData(10, 5, 12, 12, 10)]
+        [InlineData(100, 80, 110, 110, 100)]
+        
+        public void Width_Set(int initialLength, int initialWidth, int newWidth, int expectedLength, int expectedWidth)
+        {
+            // Arrange
+            Rectangle myRectangle = new Rectangle(Shape.ColourValue.Red, initialLength, initialWidth);
+
+            // Act
+            myRectangle.Width = newWidth;
+
+            // Assert
+            Assert.Equal(expectedLength, myRectangle.Length);
+            Assert.Equal(expectedWidth, myRectangle.Width);
+        }
 
     }
 }
