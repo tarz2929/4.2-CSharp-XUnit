@@ -5,7 +5,7 @@ using System.Text;
 namespace CSharpXUnit_4Point2.Shapes
 {
     // Pillar: Inheritance
-    class Circle : Shape
+    public class Circle : Shape
     {
         /*
          “Perimeter” is equivalent to a circumference for “Circle”.

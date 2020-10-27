@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSharpXUnit_4Point2.Shapes
 {
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
         /*
          Properties:

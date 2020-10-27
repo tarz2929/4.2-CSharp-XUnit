@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSharpXUnit_4Point2.Shapes
 {
-    class Triangle : Shape
+    public class Triangle : Shape
     {
         /*
          Represents an equilateral or isosceles triangle, not a scalene triangle.

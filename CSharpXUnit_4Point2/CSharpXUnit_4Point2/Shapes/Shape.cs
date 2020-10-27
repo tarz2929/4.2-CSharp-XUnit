@@ -5,7 +5,7 @@ using System.Text;
 namespace CSharpXUnit_4Point2.Shapes
 {
     // Pillar: Abstraction
-    abstract class Shape
+    public abstract class Shape
     {
         /*
          Properties, public getters only that must be overridden and provided functionality by derived classes:
