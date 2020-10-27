@@ -1,7 +1,7 @@
-﻿using CSharpOOP.Shapes;
+﻿using CSharpXUnit_4Point2.Shapes;
 using System;
 
-namespace CSharpOOP
+namespace CSharpXUnit_4Point2
 {
     class Program
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpOOP.Shapes
+namespace CSharpXUnit_4Point2.Shapes
 {
     // Pillar: Inheritance
     class Circle : Shape
